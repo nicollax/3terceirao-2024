@@ -1,0 +1,43 @@
+:root{
+    --cor-fundo: #87ff24 ;
+    --cor-principal: #00974c ;
+    --cor-secundaria: #bff1bb; 
+    --cor-destaque: #ffee02;
+    --cor-texto: #070707;
+
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.caixa-principal{
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 750x;
+    text-align: center;
+    padding: 45px;
+}
+
+h1{
+    color: var(--cor-destaque);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 55px;
+    padding: 55px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
