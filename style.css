@@ -1,43 +1,98 @@
-:root{
-    --cor-fundo: #ff7424 ;
-    --cor-principal: #975b00 ;
-    --cor-secundaria: #f1d3bb; 
-    --cor-destaque: #ffee02;
-    --cor-texto: #070707;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
+:root{
+    --cor-de-fundo: #363434;
+    --branco: #ffffff;
+    --cor-texto: #eee83e;
+    --cor-blocos: #3A375E;
+    --cor-botao-ativo: #FD2F2F;
+    --cor-botao-linha: #94FF0D;
+    --cor-rosa: #f11fab;
 }
 
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+body{
+    background-color:var(--cor-de-fundo);
+    color:var(--cor-texto);
+    font-family: "Chakra", sans-serif;
+     }
+    
+
+.conteudo-principal{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
-
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 750x;
-    text-align: center;
-    padding: 45px;
-}
-
-h1{
-    color: var(--cor-destaque);
-}
-
-button {
-    background-color: var(--cor-secundaria);
+.titulo-principal{
+    text-align: left;
+    width: 100%;
+    font-size: 32px;   
+} 
+.titulo-principal span{
     color: var(--cor-texto);
-    border: none;
-    border-radius: 55px;
-    padding: 55px;
-    transition: background-color 0.3s;
+}
+.botao{
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--cor-blocos);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--cor-botao-linha);
+    border-left: 2px solid var(--cor-botao-linha);
+    border-right:  2px solid var(--cor-botao-linha);
+    border-top: none;
+}
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+.botoes{
+    display: flex;
+}
+.ativo{
+    background-color: var(--cor-botao-ativo);
+    border-bottom: var(--branco);
+}
+.abas-textos{
+    background-color: var(--cor-de-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display: block;
+}
+.aba-conteudo{
+    display: none;
+}
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--cor-de-fundo);
+    text-transform: uppercase;
+}   
+
+.contador{
+    text-align: center;
+    font-size: 20px;
 }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+@media screen and (min-width: 768px) {
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
 }
